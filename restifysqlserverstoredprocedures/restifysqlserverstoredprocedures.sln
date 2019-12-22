@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "restifysqlserverstoredprocedures", "restifysqlserverstoredprocedures.csproj", "{59D3ACEC-D5AA-4DFF-B6B7-16EC986F7647}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{23FBDC84-7B78-47B7-8AD9-5A70E88715B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restifysqlserverstoredprocedures.Tests", "..\restifysqlserverstoredprocedures.Tests\restifysqlserverstoredprocedures.Tests.csproj", "{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59D3ACEC-D5AA-4DFF-B6B7-16EC986F7647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D3ACEC-D5AA-4DFF-B6B7-16EC986F7647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D3ACEC-D5AA-4DFF-B6B7-16EC986F7647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D3ACEC-D5AA-4DFF-B6B7-16EC986F7647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE} = {23FBDC84-7B78-47B7-8AD9-5A70E88715B7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33F1A10A-D1D2-4782-86F9-D3DEE30C8B3B}
+	EndGlobalSection
+EndGlobal
