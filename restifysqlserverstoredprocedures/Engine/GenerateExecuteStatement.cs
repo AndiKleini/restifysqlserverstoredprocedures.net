@@ -13,7 +13,12 @@ namespace restifysqlserverstoredprocedures.Engine
         public static string FromSubroute(string route)
         {
             var match = splitProcedureNameFromArguments.Match(route);
-            throw new NotImplementedException();
+            string parameter = String.Empty;
+            if (match.Groups.Count > 2 && match.Groups[3].Value != String.Empty)
+            {
+                parameter = $" {formatParameter.Replace(match.Groups[3].Value, "@$1= ")}";
+            }
+            return $"exec {match.Groups[1]}.{match.Groups[2]}{parameter}";
         }
 
         /* static formatParameters = new RegExp('([a-zA-Z0-9]+ )', 'g');
