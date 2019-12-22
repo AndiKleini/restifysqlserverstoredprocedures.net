@@ -11,12 +11,13 @@ namespace restifysqlserverstoredprocedures.Controllers
     [Route("restifysp")]
     public class RestifyStoredProcedureController : ControllerBase
     {
-        [HttpGet("{executeSpStatement}")]
-        public async Task<string> Get([FromRoute] string executeSpStatement)
+        [HttpGet("{shema}/{executeSpStatement}")]
+        public async Task<string> Get([FromRoute] string shema, [FromRoute] string executeSpStatement)
         {
-            Console.Write(executeSpStatement);
+            Console.Write(shema);
             var db = new DatabaseAccess("server=ADM000126469;Database=restifysqlserver;Trusted_Connection=Yes;");
-            return JsonConvert.SerializeObject(await db.Execute("restify.getcustomers"));
+            return JsonConvert.SerializeObject(
+                await db.Execute(GenerateExecuteStatement.FromSubroute(shema, executeSpStatement)));
         }
     }
 }
