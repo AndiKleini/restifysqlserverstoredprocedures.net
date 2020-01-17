@@ -28,5 +28,11 @@ namespace restifysqlserverstoredprocedures.Controllers
             return JsonConvert.SerializeObject(
                 await db.ExecuteWithParameter(shema + "." + procedurename, EnrichedDynamicParameters.FromArguments(arguments)));
         }
+
+        [HttpGet("v2/{shema}/{procedurename}")]
+        public async Task<string> ExecuteWithoutParameterSyntax([FromRoute] string shema, [FromRoute] string procedurename)
+        {
+            return await this.ExecuteParameterSyntax(shema, procedurename, null);
+        }
     }
 }

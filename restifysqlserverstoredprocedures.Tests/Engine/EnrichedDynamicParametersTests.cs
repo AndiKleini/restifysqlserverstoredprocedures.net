@@ -22,6 +22,15 @@ namespace restifysqlserverstoredprocedures.Tests.Engine
         }
 
         [Test]
+        public void FromArguments_NullAsArgumentsString_ParameterCreated()
+        {
+            var yieldParameters = EnrichedDynamicParameters.FromArguments(null);
+
+            yieldParameters.Should().ContainParameters(new ParameterInfo[] { }, new ParameterInfo[] { });
+        }
+
+
+        [Test]
         public void GetParameterForDirection_DirectionInput_ReturnsCollectionOfInputParameter()
         {
             string testName = "test";

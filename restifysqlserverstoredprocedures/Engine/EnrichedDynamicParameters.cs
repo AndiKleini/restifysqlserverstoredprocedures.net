@@ -14,6 +14,10 @@ namespace restifysqlserverstoredprocedures.Engine
         public static EnrichedDynamicParameters FromArguments(string arguments)
         {
             EnrichedDynamicParameters parameters = new EnrichedDynamicParameters();
+            if (string.IsNullOrEmpty(arguments))
+            {
+                return parameters;
+            }
             var matches = parameterMatcher.Matches(arguments);
             matches.Where(m => m.Groups.Count >= 3).
                 ToList().ForEach(
