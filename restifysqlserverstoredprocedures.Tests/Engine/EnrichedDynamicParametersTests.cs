@@ -106,6 +106,16 @@ namespace restifysqlserverstoredprocedures.Tests.Engine
                   },
                   new ParameterInfo[] { });
 
+                /*
+                yield return new TestCaseData(
+                "@number = 13 out",
+                new ParameterInfo[] { },
+                new ParameterInfo[]
+                {
+                      ParameterInfo.From("number", "13", ParameterDirection.Output)
+                });
+                */
+
                 // yield return new TestCaseData("@language = 'en'", new Tuple<string, object>[] { new Tuple<string, object>("@language", "en") });
                 /* 
                  yield return new TestCaseData(new Tuple<string, object>[] { new Tuple<string, object>("@number", 12) });
