@@ -1,11 +1,10 @@
 ﻿using Dapper;
-using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace restifysqlserverstoredprocedures.Engine
+namespace Restify3SP
 {
     public class EnrichedDynamicParameters : DynamicParameters
     {

@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "restifysqlserverstoredprocedures", ".\restifysqlserverstoredprocedures\restifysqlserverstoredprocedures.csproj", "{59D3ACEC-D5AA-4DFF-B6B7-16EC986F7647}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "restifysqlserverstoredprocedures", "restifysqlserverstoredprocedures\restifysqlserverstoredprocedures.csproj", "{59D3ACEC-D5AA-4DFF-B6B7-16EC986F7647}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{23FBDC84-7B78-47B7-8AD9-5A70E88715B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "restifysqlserverstoredprocedures.Tests", ".\restifysqlserverstoredprocedures.Tests\restifysqlserverstoredprocedures.Tests.csproj", "{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "restifysqlserverstoredprocedures.Tests", "restifysqlserverstoredprocedures.Tests\restifysqlserverstoredprocedures.Tests.csproj", "{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restify3SP", "Restify3SP\Restify3SP.csproj", "{CBB7D5D7-A1B1-4682-AF90-E4A28D5FCDFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restify3SP.Tests", "Restify3SP.Tests\Restify3SP.Tests.csproj", "{8B983F6E-68A2-48CE-9707-29C0AC149086}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +27,21 @@ Global
 		{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB7D5D7-A1B1-4682-AF90-E4A28D5FCDFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB7D5D7-A1B1-4682-AF90-E4A28D5FCDFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB7D5D7-A1B1-4682-AF90-E4A28D5FCDFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB7D5D7-A1B1-4682-AF90-E4A28D5FCDFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B983F6E-68A2-48CE-9707-29C0AC149086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B983F6E-68A2-48CE-9707-29C0AC149086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B983F6E-68A2-48CE-9707-29C0AC149086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B983F6E-68A2-48CE-9707-29C0AC149086}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{78DC905D-AAFD-4164-AEE6-2BAAD7D8FCEE} = {23FBDC84-7B78-47B7-8AD9-5A70E88715B7}
+		{8B983F6E-68A2-48CE-9707-29C0AC149086} = {23FBDC84-7B78-47B7-8AD9-5A70E88715B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33F1A10A-D1D2-4782-86F9-D3DEE30C8B3B}

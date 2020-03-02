@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Dapper;
 using static Dapper.SqlMapper;
 
-namespace restifysqlserverstoredprocedures.Engine
+namespace Restify3SP
 {
     public class DatabaseAccess
     {

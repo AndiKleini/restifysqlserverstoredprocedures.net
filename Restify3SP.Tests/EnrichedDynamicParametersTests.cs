@@ -1,13 +1,11 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using restifysqlserverstoredprocedures.Engine;
-using restifysqlserverstoredprocedures.Tests.Engine.Help;
-using System;
+using Restify3DS.Tests.Help;
+using Restify3SP;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 
-namespace restifysqlserverstoredprocedures.Tests.Engine
+namespace Restify3DS.Tests
 {
     [TestFixture]
     public class EnrichedDynamicParametersTests
