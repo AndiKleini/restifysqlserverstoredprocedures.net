@@ -25,7 +25,11 @@ namespace Restify3SP
                     System.Data.CommandType.StoredProcedure);
             }
         }
-        public async Task<QueryResult> ExecuteWithParameter(string procedure, EnrichedDynamicParameters parameters)
+        public async Task<QueryResult> ExecuteWithParameter(string procedure, string parameters)
+        {
+            return await this.ExecuteWithParameter(procedure, EnrichedDynamicParameters.FromArguments(parameters));
+        }
+        private async Task<QueryResult> ExecuteWithParameter(string procedure, EnrichedDynamicParameters parameters)
         {
             IEnumerable<object>[] tmpResults;
             parameters.AddParameter(

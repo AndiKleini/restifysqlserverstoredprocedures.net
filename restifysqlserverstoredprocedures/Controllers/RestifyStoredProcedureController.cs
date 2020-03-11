@@ -25,7 +25,7 @@ namespace restifysqlserverstoredprocedures.Controllers
             var db = new DatabaseAccess("server=ADM000126469;Database=restifysqlserver;Trusted_Connection=Yes;");
             // split argument part in procedurename and parameters
             return JsonConvert.SerializeObject(
-                await db.ExecuteWithParameter(shema + "." + procedurename, EnrichedDynamicParameters.FromArguments(arguments)));
+                await db.ExecuteWithParameter(shema + "." + procedurename, arguments));
         }
 
         [HttpGet("v2/{shema}/{procedurename}")]

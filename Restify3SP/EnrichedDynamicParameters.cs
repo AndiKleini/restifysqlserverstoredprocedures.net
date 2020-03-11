@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace Restify3SP
 {
-    public class EnrichedDynamicParameters : DynamicParameters
+    internal class EnrichedDynamicParameters : DynamicParameters
     {
         private List<ParameterInfo> exposedParameters;
         private static Regex parameterMatcher = new Regex("@([a-zA-Z0-9\\-]+) ?= ?('?[a-zA-Z0-9\\-]+'?)( out)?,?");
