@@ -112,19 +112,46 @@ namespace Restify3DS.Tests
                           ParameterInfo.From("number", "13", ParameterDirection.Output)
                     });
 
-                // yield return new TestCaseData("@language = 'en'", new Tuple<string, object>[] { new Tuple<string, object>("@language", "en") });
-                /* 
-                 yield return new TestCaseData(new Tuple<string, object>[] { new Tuple<string, object>("@number", 12) });
-                 yield return new TestCaseData(new Tuple<string, object>[] { new Tuple<string, object>("@language", "en") });
-                 yield return new TestCaseData(new Tuple<string, object>[] { new Tuple<string, object>("@language", "en") });
-                 yield return new TestCaseData(new Tuple<string, object>[] { new Tuple<string, object>("@language", "en") });
-                 yield return new TestCaseData(new Tuple<string, object>[] { new Tuple<string, object>("@language", "en") });
-                 */
+                yield return new TestCaseData(
+                   "@number = 13 out, @language = 'en' out",
+                   new ParameterInfo[] { },
+                   new ParameterInfo[]
+                   {
+                          ParameterInfo.From("number", "13", ParameterDirection.Output),
+                          ParameterInfo.From("language", "'en'", ParameterDirection.Output)
+                   });
+
+                yield return new TestCaseData(
+                  "@number = 13 out, @size = 23, @language = 'en' out",
+                  new ParameterInfo[] 
+                  {
+                     ParameterInfo.From("size", "23", ParameterDirection.Input)
+                  },
+                  new ParameterInfo[]
+                  {
+                          ParameterInfo.From("number", "13", ParameterDirection.Output),
+                          ParameterInfo.From("language", "'en'", ParameterDirection.Output)
+                  });
+
+                yield return new TestCaseData(
+                    "@id = 'cd82ff5f-23c6-487c-b615-55d16737f8a4'",
+                    new ParameterInfo[]
+                    {
+                         ParameterInfo.From("id", "'cd82ff5f-23c6-487c-b615-55d16737f8a4'", ParameterDirection.Input)
+                    },
+                    new ParameterInfo[] { });
+
+                yield return new TestCaseData(
+                   "@id = 'cd82ff5f-23c6-487c-b615-55d16737f8a4', @idOut = '8552ab5e-422d-407d-9174-6986f65f7b89' out",
+                   new ParameterInfo[]
+                   {
+                         ParameterInfo.From("id", "'cd82ff5f-23c6-487c-b615-55d16737f8a4'", ParameterDirection.Input)
+                   },
+                   new ParameterInfo[] 
+                   {
+                        ParameterInfo.From("idOut", "'8552ab5e-422d-407d-9174-6986f65f7b89'", ParameterDirection.Output)
+                   });
             }
         }
-
-
-
-
     }
 }
