@@ -5,15 +5,15 @@
   <title>Restify3SP</title>
   <authors>Andreas Kleinbichler</authors>
   <owners>Andreas Kleinbichler</owners>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <license type="File">LICENSE.txt</license>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
   <description>Executes a SQl Server Stored Procedure specified by a REST Url.</description>
-  <releaseNotes>Initial 1.0.0 release</releaseNotes>
+  <releaseNotes>Initial 1.0.1 release</releaseNotes>
   <copyright>Copyright 2020 AndiKleini</copyright>
   <tags>Restify3SP</tags>
   <dependencies>
-    <group targetFramework=".NETCore3.1">
+    <group targetFramework=".netcoreapp3.1">
       <dependency id="Dapper" version="2.0.30" />
       <dependency id="NewtonSoft.Json" version="12.0.3" />
       <dependency id="System.Data.SqlClient" version="4.8.1" />
@@ -22,7 +22,7 @@
   <summary>Executes a SQl Server Stored Procedure specified by a REST Url. Can be used for building REST APIs for accessing SQL Server.</summary>
  </metadata>
  <files>
-  <file src="bin\Debug\netcoreapp3.1\*.dll" target="lib\.netcore3.1" />
+  <file src="bin\Debug\netcoreapp3.1\*.dll" target="lib\netcoreapp3.1" />
   <file src="LICENSE.txt" target="LICENSE.txt" />
  </files>
 </package>

@@ -1,3 +1,4 @@
 ﻿Clean up solution
-Fix issue with output parameter
-Publsih nuget package as prerelease
+Fix issue with output parameter (it seems that aoutput parameter is not parsed correctly)
+Provide Extension Method to JSON in Restify3SP package => reduce code in API
+
