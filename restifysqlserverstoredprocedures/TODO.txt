@@ -1,0 +1,3 @@
+﻿Clean up solution
+Fix issue with output parameter
+Publsih nuget package as prerelease

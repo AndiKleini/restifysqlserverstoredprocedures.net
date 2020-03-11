@@ -46,6 +46,9 @@ build/
 *.log
 *.scc
 
+# Nuget
+*.nupkg
+
 # Visual C++ cache files
 ipch/
 *.aps
