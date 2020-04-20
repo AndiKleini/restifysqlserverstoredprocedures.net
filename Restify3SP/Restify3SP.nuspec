@@ -5,16 +5,16 @@
   <title>Restify3SP</title>
   <authors>Andreas Kleinbichler</authors>
   <owners>Andreas Kleinbichler</owners>
-  <version>1.0.1</version>
+  <version>1.0.3</version>
   <license type="File">LICENSE.txt</license>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
   <description>Executes a SQl Server Stored Procedure specified by a REST Url.</description>
-  <releaseNotes>Initial 1.0.1 release</releaseNotes>
+  <releaseNotes>Fixed issue of empty resultset.</releaseNotes>
   <copyright>Copyright 2020 AndiKleini</copyright>
   <tags>Restify3SP</tags>
   <dependencies>
     <group targetFramework=".netcoreapp3.1">
-      <dependency id="Dapper" version="2.0.30" />
+      <dependency id="Dapper" version="2.0.35" />
       <dependency id="NewtonSoft.Json" version="12.0.3" />
       <dependency id="System.Data.SqlClient" version="4.8.1" />
     </group>
