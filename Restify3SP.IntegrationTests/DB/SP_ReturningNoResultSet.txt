@@ -1,0 +1,5 @@
+﻿create procedure [restify].[ReturnsNoResultSet] 
+as
+begin
+	return 0;
+end

@@ -1,0 +1,8 @@
+﻿create procedure [restify].[UpdateOnlyAndEmitRowcount]
+as
+begin
+	update [restify].[datStudents]
+	set SurName = 'Ducking'
+	where StudentId < 4
+	select @@ROWCOUNT as 'Affected rows by update';
+end

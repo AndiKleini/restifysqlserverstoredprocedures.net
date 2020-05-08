@@ -1,0 +1,8 @@
+﻿create procedure [restify].[EmitMultipleDifferentResultSets]
+as
+begin
+	select SurName from [restify].[datStudents] where SurName is not null;
+	select StudentId, ForeName, SurName from [restify].[datStudents] where SurName is not null;
+	select StudentId, ForeName from [restify].[datStudents] where SurName is not null;
+	select @@ROWCOUNT as 'affectedRows';
+end

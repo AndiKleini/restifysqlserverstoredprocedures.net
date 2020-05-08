@@ -1,0 +1,6 @@
+﻿create table [restify].[datStudents]
+(
+	StudentId int identity (1,1) primary key clustered,
+	SurName varchar(50),
+	Forename varchar(50)
+)

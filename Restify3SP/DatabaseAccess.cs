@@ -68,21 +68,21 @@ namespace Restify3SP
             // HasRows method is necessary when SP emits no resultsets
             // compare issue below:
             // https://github.com/StackExchange/Dapper/issues/327
-            while (!reader.IsConsumed && this.HasRows(reader))
+            while (!reader.IsConsumed && this.HasResultSet(reader))
             {
                 yield return true;
             }
             yield break;
         }
 
-        private bool HasRows(GridReader reader)
+        private bool HasResultSet(GridReader reader)
         {
             SqlDataReader internalReader = (SqlDataReader)typeof(GridReader).
                 GetField
                 ("reader",
                 System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
                 .GetValue(reader);
-            return internalReader.HasRows;
+            return internalReader.FieldCount != 0;
         }
     }
 }

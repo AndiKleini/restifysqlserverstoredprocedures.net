@@ -1,0 +1,7 @@
+﻿create procedure [restify].[UpdateOnlyAndEmitRowcount]
+as
+begin
+	update [restify].[datStudents]
+	set SurName = 'Ducking'
+	where StudentId < 4
+end
