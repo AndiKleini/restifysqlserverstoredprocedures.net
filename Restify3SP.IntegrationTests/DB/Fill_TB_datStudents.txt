@@ -1,0 +1,1 @@
+﻿INSERT INTO [restify].[datStudents](Forename, SurName) VALUES('Donald', 'Duck');

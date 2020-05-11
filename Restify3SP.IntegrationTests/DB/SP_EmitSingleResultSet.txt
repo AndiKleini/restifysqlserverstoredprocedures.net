@@ -1,0 +1,5 @@
+﻿create procedure [restify].[EmitSingleResultSet]
+as
+begin
+	select SurName from [restify].[datStudents] where SurName is not null;
+end
