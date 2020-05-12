@@ -25,6 +25,15 @@
     <None Update="DB\CleanUp\DropSchemaRestify.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="DB\Drop_SP_EmitMultipleDifferentResultSets.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DB\Drop_SP_UpdateOnlyWithNoResult.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DB\Drop_SP_EmitSingleResultSetWithRowCount.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="DB\Drop_SP_EmitSingleResultSet.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -37,7 +46,16 @@
     <None Update="DB\Drop_TB_datStudents.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="DB\SP_EmitMultipleDifferentResultSets.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DB\SP_EmitSingleResultSetWithRowCount.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="DB\SP_EmitSingleResultSet.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DB\SP_UpdateOnlyWithNoResult.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="DB\TB_datStudents.txt">

@@ -1,0 +1,6 @@
+﻿create procedure [restify].[EmitSingleResultSetWithRowCount]
+as
+begin
+	select SurName from [restify].[datStudents] where SurName is not null;
+	select @@rowcount as 'Number of selected rows';
+end

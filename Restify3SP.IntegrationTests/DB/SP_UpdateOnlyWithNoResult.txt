@@ -1,4 +1,4 @@
-﻿create procedure [restify].[UpdateOnlyAndEmitRowcount]
+﻿create procedure [restify].[UpdateOnlyWithNoResult]
 as
 begin
 	update [restify].[datStudents]
