@@ -5,11 +5,11 @@
   <title>Restify3SP</title>
   <authors>Andreas Kleinbichler</authors>
   <owners>Andreas Kleinbichler</owners>
-  <version>1.0.3</version>
+  <version>1.0.4</version>
   <license type="File">LICENSE.txt</license>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
   <description>Executes a SQl Server Stored Procedure specified by a REST Url.</description>
-  <releaseNotes>Fixed issue of empty resultset.</releaseNotes>
+  <releaseNotes>Support procedures without producing any resultsets at all.Supporting procedures emitting single line selects.</releaseNotes>
   <copyright>Copyright 2020 AndiKleini</copyright>
   <tags>Restify3SP</tags>
   <dependencies>
