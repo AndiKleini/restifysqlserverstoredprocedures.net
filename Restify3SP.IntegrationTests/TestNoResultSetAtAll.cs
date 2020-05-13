@@ -26,7 +26,7 @@ namespace Restify3SP.IntegrationTests
         }
 
         [Test]
-        public async Task ExecuteSP_EmitsSingleResultSet_ReturnsProperJson()
+        public async Task ExecuteSP_EmitsNoResultSet_ReturnsProperJson()
         {
             var result = await this.Act("[restify].[UpdateOnlyWithNoResult]", null);
 
