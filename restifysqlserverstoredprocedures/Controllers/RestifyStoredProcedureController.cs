@@ -14,7 +14,7 @@ namespace restifysqlserverstoredprocedures.Controllers
         public async Task<string> ExecuteParameterSyntax([FromRoute] string shema, [FromRoute] string procedurename, [FromRoute] string arguments)
         {
             
-            var db = new DatabaseAccess("server=aag-cs.dev03.dev.admiral.local,46005;Database=Admiral_CentralSystem01;Trusted_Connection=Yes;");
+            var db = new DatabaseAccess("server=ADM000126469;Database=restifysqlserver;Trusted_Connection=Yes;");
             // split argument part in procedurename and parameters
             return JsonConvert.SerializeObject(
                 await db.ExecuteWithParameter(shema + "." + procedurename, arguments));
