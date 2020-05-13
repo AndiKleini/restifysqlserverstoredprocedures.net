@@ -8,7 +8,7 @@
   <version>1.0.4</version>
   <license type="File">LICENSE.txt</license>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
-  <description>Executes a SQl Server Stored Procedure specified by a REST Url.</description>
+  <description>Executes a SQL Server Stored Procedure specified by a REST Url.</description>
   <releaseNotes>Support procedures without producing any resultsets at all.Supporting procedures emitting single line selects.</releaseNotes>
   <copyright>Copyright 2020 AndiKleini</copyright>
   <tags>Restify3SP</tags>
