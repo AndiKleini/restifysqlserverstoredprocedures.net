@@ -36,6 +36,7 @@ AS
 	select * from testSchema.testTable where globalId =  @fifthParameterGuid;
 	select * from testSchema.testTable where globalId = @fifthParameterGuid;
 	set @sixtParameterInt = 23;
+	return 13;
 GO  
 ```
 In order to see it really working, we first populate testSchema.testTable with some test data:
@@ -115,7 +116,7 @@ According to the test data we inserted above, JSON below is delivered:
    "OutputParameter":{
       "sixtParameterInt":"23"
    },
-   "Return":0
+   "Return":13
 }
 ```
 # Running as docker container ?
