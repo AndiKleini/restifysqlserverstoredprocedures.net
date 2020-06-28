@@ -8,6 +8,15 @@ Sometimes it is easier, or maybe the only possible option, to access Stored Proc
 * Rapid development for integrating database calls in your application
 * Apply middleware (e.g.: output-caching, audit tracing, authentication, authorization) to database interface 
 * Circumvent direct technological dependencies between client and SQL Server
+## Meet the interface of Restify3SP
+Once you have installed the Restify3SP nuget package, you have to create a proper DataBaseAccess instance by passing your connection string:
+```C#
+ var access = new DatabaseAccess("Data Source={YourServerName};Initial Catalog=restifysp; Integrated Security=true;");
+```
+Next you can pass a stored procedures schema, procedurename and arguments to 
+```C#
+string result = await s.WithParameter(schema + "." + procedurename, arguments);
+```
 ## Running the VS project ?
 Assuming you want to expose some stored procedure, simply running a query against a table, by a REST interface:
 ```SQL
