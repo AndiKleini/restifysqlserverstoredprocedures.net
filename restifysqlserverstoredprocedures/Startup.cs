@@ -1,14 +1,18 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Restify3SP;
+using System;
+using System.Net;
 
-namespace restifysqlserverstoredprocedures
+namespace asw.test.restifyspsqlserver
 {
     public class Startup
     {
+        private string dbName;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -20,36 +24,47 @@ namespace restifysqlserverstoredprocedures
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            // services.AddMvc((mvcOption) => mvcOption.EnableEndpointRouting = false);
+            services.AddSingleton(typeof(DatabaseAccess), new DatabaseAccess(this.Configuration.GetConnectionString("Db")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
+            this.dbName = (string)this.Configuration.GetValue(typeof(string), "DataBaseName");
+            if (String.IsNullOrWhiteSpace(dbName))
             {
-                app.UseDeveloperExceptionPage();
+                throw new Exception("Target database is not configured in appsettings. Please check configuration setting DataBaseName.");
             }
+
+            app.UseExceptionHandler($"/{dbName}/error");
 
             app.UseHttpsRedirection();
 
+            app.Use(async (context, next) =>
+            {
+                if (context.Request.Path.StartsWithSegments($"/{dbName}"))
+                {
+                    await next.Invoke();
+                }
+                else
+                {
+                    context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                    await context.Response.WriteAsync($"Database specified in {context.Request.Path} not supported. Service is restricted to use datbase {dbName} only.");
+                }
+            });
+
             app.UseRouting();
 
-            app.UseAuthorization();
-
-            
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
-            });
-            
+                endpoints.MapControllerRoute(
+                    "default",
+                    "{schema}/{procedurename}/{arguments}");
 
-            /*
-            app.UseMvc(route =>
-            {
-                route.MapRoute("restifysp", "{controller=RestifyStoredProcedureController}/{executeSpStatement?}");
+                endpoints.MapControllerRoute(
+                    "error",
+                    "error");
             });
-            */
         }
     }
 }
