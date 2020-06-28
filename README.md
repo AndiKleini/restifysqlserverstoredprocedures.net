@@ -126,8 +126,11 @@ According to the test data we inserted above, JSON below is delivered. As you ca
 }
 ```
 # Running as docker container ?
-// TODO: add Docker file to project
-If you don't want/can run it as VS project, you simply can use the added docker image.
+If you don't want/can run it as VS project, you simply can use the added docker image. Please be aware that port mapping in docker run is required:
+```Command
+docker build . -t restify
+docker run -p 80:80 restify
+```
 # Restrictions (or maybe motivations for future releases) 
 Lets summarize yet unsupported features. 
 * User defined input types 
