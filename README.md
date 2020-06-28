@@ -1,5 +1,9 @@
 # Create REST interface for SQL Server Stored Procedures
-Implements a REST interface for invoking SQL Server Stored procedures. Parsing logic and DB access are wrapped by proper nuget Package 
-Restfy3SP, so that reusage is supported. Nonetheless, a fully working ASP.Net REST API is included as well. 
+Transfers a REST url into a SQL Server Stored Procedure call where parsing logic and DB access are located in a seperate nuget Package 
+Restfy3SP, supporting reusability for other scenarios as well. Additionally the repository includes an ASP.Net REST API as example application. 
 ## Meet the problem
-Sometimes it is easier, or maybe the only possible option, to access Stored Procedures by a proper REST interface, then directly establishing a database connection. Typical scenarios where one would like to follow this approach are summarized below:
+Sometimes it is easier, or maybe the only possible option, to access Stored Procedures by a proper REST interface, rather than directly establishing a database connection. Typical scenarios where one would like to follow this approach are summarized below:
+* Execute permissions are restricted to technical service users only
+* Avoid establishing direct connection from the client to SQL Server
+* Rapid development for integrating database calls in your application
+* Apply middleware (e.g.: output-caching, audit tracing, authentication, authorization) to database interface 
