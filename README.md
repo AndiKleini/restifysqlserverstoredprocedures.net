@@ -23,18 +23,28 @@ CREATE TABLE restifysp.testSchema.testTable (
 Go
 
 CREATE PROCEDURE testSchema.testProcedure  
-    @firstParameterVarChar nvarchar(50),   
-    @secondParameterInteger int,
-    @thirdParameterDate date,
-    @forthParameterGuid uniqueidentifier
+    @firstParameterInt int,
+	@secondParameterVarChar nvarchar(50),   
+    @thirdParameterStartDate date,
+	@forthParameterEndDate date,
+    @fifthParameterGuid uniqueidentifier,
+	@sixtParameterInt int out
 AS   
-    Do something
-    ... 
+	select * from testSchema.testTable where id = @firstParameterInt;
+	select * from testSchema.testTable where name = @secondParameterVarChar;
+	select * from testSchema.testTable where creationDate between @thirdParameterStartDate and @forthParameterEndDate
+	select * from testSchema.testTable where globalId =  @fifthParameterGuid;
+	select * from testSchema.testTable where globalId = @fifthParameterGuid;
+	set @sixtParameterInt = 23;
 GO  
 ```
 In order to see it really working, we first populate testSchema.testTable with some test data:
 ```SQL
-insert test data
+insert into restifysp.testSchema.testTable values ('Wolfgang', '2020-06-27 07:36:45.000', '236CD99E-3316-43CE-9210-7A66588CEB62')
+insert into restifysp.testSchema.testTable values ('Petra', '2020-06-28 08:22:17.000', 'E993ED58-1FDB-493C-A1D6-5310ECEFE0DC')
+insert into restifysp.testSchema.testTable values ('Denis', '2020-06-29 10:04:12.000', '1075E085-30D4-4C0D-9F1E-99231D9342D0')
+insert into restifysp.testSchema.testTable values ('Robert', '2020-06-29 15:24:42.000', '91B608E1-BF4A-4240-A76C-1C1696B4F955')
+insert into restifysp.testSchema.testTable values ('Andrea', '2020-06-30 09:16:12.000', '21A941EA-0599-46AF-970C-B99D899170ED')
 ```
 By configuring proper connection string in appsettings json:
 ```JSON
