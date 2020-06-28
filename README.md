@@ -8,7 +8,7 @@ Sometimes it is easier, or maybe the only possible option, to access Stored Proc
 * Rapid development for integrating database calls in your application
 * Apply middleware (e.g.: output-caching, audit tracing, authentication, authorization) to database interface 
 * Circumvent direct technological dependencies between client and SQL Server
-## How to (running the VS project?
+## Running the VS project ?
 Assuming you want to expose some stored procedure, simply running a query against a table, by a REST interface:
 ```SQL
 #TODO: create test table here
@@ -37,7 +37,7 @@ http://myserver/dbname/testSchema/testProcedure/@firstParameter='somestring',@se
 According to the test data we inserted above, JSON below is delivered:
 ```JSON
 ```
-# How to (run as docker container) ?
+# Running as docker container ?
 // TODO: add Docker file to project
 If you don't want/can run it as VS project, you simply can use the added docker image.
 # Restrictions (or maybe motivations for future releases) 
