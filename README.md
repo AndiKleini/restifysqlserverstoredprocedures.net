@@ -59,7 +59,7 @@ By configuring proper connection string (in this example integrated security is 
 ```
 you can expose it under following REST url (method get):
 ```html
-https://localhost:44399/restifysp/testSchema/testProcedure/@firstParameterInt=2, @secondParameterVarChar='Unknown',@thirdParameterStartDate=2020-06-27 05:36:45.00',@forthParameterEndDate=2020-06-29 15:24:42.000,@fifthParameterGuid=21A941EA-0599-46AF-970C-B99D899170ED,@sixtParameterInt=0 out
+https://localhost:44399/restifysp/testSchema/testProcedure/@firstParameterInt=2, @secondParameterVarChar=Unknown,@thirdParameterStartDate=2020-06-27 05:36:45.00',@forthParameterEndDate=2020-06-29 15:24:42.000,@fifthParameterGuid=21A941EA-0599-46AF-970C-B99D899170ED,@sixtParameterInt=0 out
 ```
 According to the test data we inserted above, JSON below is delivered:
 ```JSON
