@@ -15,7 +15,7 @@ Once you have installed the Restify3SP nuget package, you have to create a prope
 ```
 Next you can pass a stored procedures schema, procedurename and arguments to 
 ```C#
-string result = await s.WithParameter(schema + "." + procedurename, arguments);
+string result = await access.ExecuteWithParameter(schema + "." + procedurename, arguments);
 ```
 ## Running the VS project ?
 Assuming you want to expose some stored procedure, simply running a query against a table, by a REST interface:
