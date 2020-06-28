@@ -7,3 +7,4 @@ Sometimes it is easier, or maybe the only possible option, to access Stored Proc
 * Avoid establishing direct connection from the client to SQL Server
 * Rapid development for integrating database calls in your application
 * Apply middleware (e.g.: output-caching, audit tracing, authentication, authorization) to database interface 
+* Resolve technological dependencies between client and SQL Server
