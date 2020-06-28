@@ -24,11 +24,11 @@ Go
 
 CREATE PROCEDURE testSchema.testProcedure  
     @firstParameterInt int,
-	@secondParameterVarChar nvarchar(50),   
+    @secondParameterVarChar nvarchar(50),   
     @thirdParameterStartDate date,
-	@forthParameterEndDate date,
+    @forthParameterEndDate date,
     @fifthParameterGuid uniqueidentifier,
-	@sixtParameterInt int out
+    @sixtParameterInt int out
 AS   
 	select * from testSchema.testTable where id = @firstParameterInt;
 	select * from testSchema.testTable where name = @secondParameterVarChar;
