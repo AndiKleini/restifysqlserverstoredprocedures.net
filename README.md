@@ -11,12 +11,22 @@ Sometimes it is easier, or maybe the only possible option, to access Stored Proc
 ## Running the VS project ?
 Assuming you want to expose some stored procedure, simply running a query against a table, by a REST interface:
 ```SQL
-#TODO: create test table here
+CREATE SCHEMA testSchema
+GO
+
+CREATE TABLE restifysp.testSchema.testTable (
+    id int Identity(1,1) PRIMARY KEY,
+    name nvarchar(100),
+    creationDate date,
+	globalId uniqueidentifier
+);
+Go
 
 CREATE PROCEDURE testSchema.testProcedure  
     @firstParameterVarChar nvarchar(50),   
     @secondParameterInteger int,
-    @thirdParameterGuid uniqueidentifier
+    @thirdParameterDate date,
+    @forthParameterGuid uniqueidentifier
 AS   
     Do something
     ... 
@@ -32,10 +42,11 @@ By configuring proper connection string in appsettings json:
 ```
 you can expose it under following REST url (method get):
 ```html
-http://myserver/dbname/testSchema/testProcedure/@firstParameter='somestring',@secondParameter=23,@thirdParameter=42e67646-7863-4498-9221-b38e31ebf9ed
+https://localhost:44399/restifysp/testSchema/testProcedure/@firstParameterInt=2, @secondParameterVarChar='Denis',@thirdParameterStartDate=2020-06-27 05:36:45.00',@forthParameterEndDate=2020-06-29 15:24:42.000,@fifthParameterGuid=21A941EA-0599-46AF-970C-B99D899170ED,@sixtParameterInt=0 out
 ```
 According to the test data we inserted above, JSON below is delivered:
 ```JSON
+{"Result":[[{"id":2,"name":"Petra","creationDate":"2020-06-28T00:00:00","globalId":"e993ed58-1fdb-493c-a1d6-5310ecefe0dc"}],[],[{"id":1,"name":"Wolfgang","creationDate":"2020-06-27T00:00:00","globalId":"236cd99e-3316-43ce-9210-7a66588ceb62"},{"id":2,"name":"Petra","creationDate":"2020-06-28T00:00:00","globalId":"e993ed58-1fdb-493c-a1d6-5310ecefe0dc"},{"id":3,"name":"Denis","creationDate":"2020-06-29T00:00:00","globalId":"1075e085-30d4-4c0d-9f1e-99231d9342d0"},{"id":4,"name":"Robert","creationDate":"2020-06-29T00:00:00","globalId":"91b608e1-bf4a-4240-a76c-1c1696b4f955"}],[{"id":5,"name":"Andrea","creationDate":"2020-06-30T00:00:00","globalId":"21a941ea-0599-46af-970c-b99d899170ed"}],[{"id":5,"name":"Andrea","creationDate":"2020-06-30T00:00:00","globalId":"21a941ea-0599-46af-970c-b99d899170ed"}]],"OutputParameter":{"sixtParameterInt":"23"},"Return":0}
 ```
 # Running as docker container ?
 // TODO: add Docker file to project
@@ -44,4 +55,6 @@ If you don't want/can run it as VS project, you simply can use the added docker 
 Lets summarize yet unsupported features. 
 * User defined input types 
 Depending on feedback those can be implemented
+
+
 
