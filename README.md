@@ -47,9 +47,15 @@ insert into restifysp.testSchema.testTable values ('Denis', '2020-06-29 10:04:12
 insert into restifysp.testSchema.testTable values ('Robert', '2020-06-29 15:24:42.000', '91B608E1-BF4A-4240-A76C-1C1696B4F955')
 insert into restifysp.testSchema.testTable values ('Andrea', '2020-06-30 09:16:12.000', '21A941EA-0599-46AF-970C-B99D899170ED')
 ```
-By configuring proper connection string in appsettings json:
+By configuring proper connection string (in this example integrated security is used) in appsettings json, which is placed directly in project root. You should also restrict your urls to a single database in order to avoid any confusions. This has to be done by specifying the database name in connection string as Catalog and in appsettings property DateBaseName :
 ```JSON
-// TODO configure connection strinh here
+...
+"ConnectionStrings": {
+    "Db": "Data Source={YourServerName};Initial Catalog={YourDateBaseName}; Integrated Security=true;"
+  }, 
+  "providerName=\"System.Data.SqlClient\"\",": null,
+  "DataBaseName":  "{YourDateBaseName}"
+...
 ```
 you can expose it under following REST url (method get):
 ```html
