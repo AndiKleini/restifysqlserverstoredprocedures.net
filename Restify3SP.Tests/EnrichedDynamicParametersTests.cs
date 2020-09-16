@@ -151,6 +151,15 @@ namespace Restify3DS.Tests
                    {
                         ParameterInfo.From("idOut", "'8552ab5e-422d-407d-9174-6986f65f7b89'", ParameterDirection.Output)
                    });
+
+                yield return new TestCaseData(
+                  "@MandatorNumber=9, @SearchParameter=tosca_payment@admiral.at",
+                  new ParameterInfo[]
+                  {
+                         ParameterInfo.From("MandatorNumber", "9", ParameterDirection.Input),
+                         ParameterInfo.From("SearchParameter", "tosca_payment@admiral.at", ParameterDirection.Input)
+                  },
+                  new ParameterInfo[] { });
             }
         }
     }
