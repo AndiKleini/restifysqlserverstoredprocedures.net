@@ -9,7 +9,7 @@ namespace Restify3SP
     internal class EnrichedDynamicParameters : DynamicParameters
     {
         private List<ParameterInfo> exposedParameters;
-        private static Regex parameterMatcher = new Regex("@([a-zA-Z0-9\\-]+) ?= ?('?[a-zA-Z0-9_@.\\-]+'?)( out)?,?");
+        private static Regex parameterMatcher = new Regex("@([a-zA-Z0-9\\-]+) ?= ?('?[a-zA-Z0-9_@.<>!?\\-]+'?)( out)?,?");
         public static EnrichedDynamicParameters FromArguments(string arguments)
         {
             EnrichedDynamicParameters parameters = new EnrichedDynamicParameters();
