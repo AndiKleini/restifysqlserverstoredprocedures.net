@@ -5,11 +5,11 @@
   <title>Restify3SP</title>
   <authors>Andreas Kleinbichler</authors>
   <owners>Andreas Kleinbichler</owners>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <license type="File">LICENSE.txt</license>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
   <description>Executes a SQL Server Stored Procedure specified by a REST Url.</description>
-  <releaseNotes>Allow '@', '_' and '.' as characters in parameter values.</releaseNotes>
+  <releaseNotes>Allow &lt;,  &gt;, ! and ? as characters in parameter values.</releaseNotes>
   <copyright>Copyright 2020 AndiKleini</copyright>
   <tags>Restify3SP</tags>
   <dependencies>
