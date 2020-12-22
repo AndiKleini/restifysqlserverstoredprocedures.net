@@ -160,6 +160,15 @@ namespace Restify3DS.Tests
                          ParameterInfo.From("SearchParameter", "tosca_payment@admiral.at", ParameterDirection.Input)
                   },
                   new ParameterInfo[] { });
+
+                yield return new TestCaseData(
+                 "@MandatorNumber=9, @Machinenumber=<<!?TER-04523>>",
+                 new ParameterInfo[]
+                 {
+                         ParameterInfo.From("MandatorNumber", "9", ParameterDirection.Input),
+                         ParameterInfo.From("Machinenumber", "<<!?TER-04523>>", ParameterDirection.Input)
+                 },
+                 new ParameterInfo[] { });
             }
         }
     }
