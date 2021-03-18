@@ -1,1 +1,1 @@
-﻿
+﻿nuget.exe pack Restify3SP.nuspec
