@@ -177,6 +177,15 @@ namespace Restify3DS.Tests
                          ParameterInfo.From("TransactionDateUtcFrom", "2021-03-18T08:08:08Z567", ParameterDirection.Input)
                 },
                 new ParameterInfo[] { });
+
+                yield return new TestCaseData(
+               "@MandatorNumber=9, @TransactionDateUtcFrom=2021-03-18T08:08:08Z567",
+               new ParameterInfo[]
+               {
+                         ParameterInfo.From("MandatorNumber", "9", ParameterDirection.Input),    
+                         ParameterInfo.From("TransactionDateUtcFrom", "2021-03-18T08:08:08Z567", ParameterDirection.Input)
+               },
+               new ParameterInfo[] { });
             }
         }
     }
