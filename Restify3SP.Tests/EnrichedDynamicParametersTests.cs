@@ -186,6 +186,42 @@ namespace Restify3DS.Tests
                          ParameterInfo.From("TransactionDateUtcFrom", "2021-03-18T08:08:08Z567", ParameterDirection.Input)
                },
                new ParameterInfo[] { });
+
+                yield return new TestCaseData(
+               "@MandatorNumber=9, @TransactionDateUtcFrom=2021-03-18T08:08:08Z567",
+               new ParameterInfo[]
+               {
+                    ParameterInfo.From("MandatorNumber", "9", ParameterDirection.Input),
+                    ParameterInfo.From("TransactionDateUtcFrom", "2021-03-18T08:08:08Z567", ParameterDirection.Input)
+               },
+               new ParameterInfo[] { });
+
+               yield return new TestCaseData(
+               "@county=Kärnten, @TransactionDateUtcFrom=2021-03-18T08:08:08Z567",
+               new ParameterInfo[]
+               {
+                    ParameterInfo.From("county", "Kärnten", ParameterDirection.Input),
+                    ParameterInfo.From("TransactionDateUtcFrom", "2021-03-18T08:08:08Z567", ParameterDirection.Input)
+               },
+               new ParameterInfo[] { });
+
+               yield return new TestCaseData(
+               "@country=Österreich, @TransactionDateUtcFrom=2021-03-18T08:08:08Z567",
+               new ParameterInfo[]
+               {
+                    ParameterInfo.From("country", "Österreich", ParameterDirection.Input),
+                    ParameterInfo.From("TransactionDateUtcFrom", "2021-03-18T08:08:08Z567", ParameterDirection.Input)
+               },
+               new ParameterInfo[] { });
+
+               yield return new TestCaseData(
+               "@messageWithSpecialVocals=ÜÖÄüÄöü, @TransactionDateUtcFrom=2021-03-18T08:08:08Z567",
+               new ParameterInfo[]
+               {
+                    ParameterInfo.From("messageWithSpecialVocals", "ÜÖÄüÄöü", ParameterDirection.Input),
+                    ParameterInfo.From("TransactionDateUtcFrom", "2021-03-18T08:08:08Z567", ParameterDirection.Input)
+               },
+               new ParameterInfo[] { });
             }
         }
     }
