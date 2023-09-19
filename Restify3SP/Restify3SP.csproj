@@ -4,6 +4,14 @@
     <TargetFramework>net5.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Version>1.0.9</Version>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <Title>Restify3SP</Title>
+    <Authors>Andreas Kleinbichler</Authors>
+    <Description>Executes a SQL Server Stored Procedure specified by a REST Url.</Description>
+    <Copyright>Copyright 2020 AndiKleini</Copyright>
+    <PackageId>Restify3SP</PackageId>
+    <PackageReleaseNotes>Upgrade to .Net 5</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +27,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="license.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Update="Restify3SP.nuspec">
       <SubType>Component</SubType>
     </None>

@@ -1,28 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+This nuspec is kept as an alternative solution for nuget package creation to the VS pack option.
+/-->
 <package>
  <metadata>
   <id>Restify3SP</id>
   <title>Restify3SP</title>
   <authors>Andreas Kleinbichler</authors>
   <owners>Andreas Kleinbichler</owners>
-  <version>1.0.7</version>
+  <version>1.0.9</version>
   <license type="File">LICENSE.txt</license>
   <requireLicenseAcceptance>false</requireLicenseAcceptance>
   <description>Executes a SQL Server Stored Procedure specified by a REST Url.</description>
-  <releaseNotes>Allow &lt;,  &gt;, ! and ? as characters in parameter values.</releaseNotes>
+  <releaseNotes>Move to net 5.0</releaseNotes>
   <copyright>Copyright 2020 AndiKleini</copyright>
   <tags>Restify3SP</tags>
   <dependencies>
     <group targetFramework=".netcoreapp3.1">
-      <dependency id="Dapper" version="2.0.35" />
-      <dependency id="NewtonSoft.Json" version="12.0.3" />
-      <dependency id="Microsoft.Data.SqlClient" version="4.8.1" />
+      <dependency id="Dapper" version="2.0.151" />
+      <dependency id="NewtonSoft.Json" version="13.0.3" />
+      <dependency id="Microsoft.Data.SqlClient" version="5.1.1" />
     </group>
   </dependencies>
   <summary>Executes a SQl Server Stored Procedure specified by a REST Url. Can be used for building REST APIs for accessing SQL Server.</summary>
  </metadata>
  <files>
-  <file src="bin\Debug\netcoreapp3.1\*.dll" target="lib\netcoreapp3.1" />
+  <file src="bin\Debug\net5.0\*.dll" />
   <file src="LICENSE.txt" target="LICENSE.txt" />
  </files>
 </package>
